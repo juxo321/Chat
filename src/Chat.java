@@ -103,7 +103,7 @@ public class Chat extends Application {
                 System.out.println("Se ha conectado un cliente: " + cliente);
 
                 enviarMensaje("+OK Bienvenido al servidor de mensajes");
-                enviarMensaje("Introduce eu nombre de usuario y dar ENTER: ");
+                enviarMensaje("+REQ  Introduce el nombre de usuario y da ENTER: ");
 
                 apodo = lector.readLine();
 
@@ -115,7 +115,8 @@ public class Chat extends Application {
                             agregarMensajes("Usuario: "+apodo+", Cadena recibida: " + cad);
                         }
                     });
-                    if(cad.equals("**SALIR**")){
+                    if (cad.equals("**SALIR**"))
+                    {
                         salir = true;
                         break;
                     }
